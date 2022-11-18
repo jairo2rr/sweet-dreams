@@ -1,0 +1,107 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, sans-serif,Arial, Helvetica, sans-serif;
+}
+
+#page-login{
+    text-align: center;
+    align-items: center;
+    background: red;
+    width: auto;
+    height: 100%;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #3b5999;
+}
+header > .navigation{
+    padding: 15px 0px 0px 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+}
+
+.navigation > a,p{
+    color: white;
+}
+.navigation > a:hover{
+    color: rgb(206, 206, 206);
+}
+
+.header-top{
+    background: #30477b;
+    width: 100%;
+    height: 28px;
+    margin: 0px;
+    padding: 0px;
+}
+
+header > a{
+    color: white;
+}
+main{
+    padding: 10px 40px 0px 40px;
+    margin-top: 60px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    height: auto;
+    /* height: fit-content; */
+    width: 100%;
+}
+main > p {
+    color: black;
+}
+.logo-circular{
+    height: auto;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #2a255b;
+    shape-image-threshold: initial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.field{
+    display: flex;
+    flex-direction: column;
+}
+.field > input{
+    border-radius: 15px;
+    height: 40px;
+    border: 1px solid;
+    padding: 15px;
+}
+.btn-custom{
+    background-color: #413178;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+}
+
+.btn-primario{
+    text-decoration: none;
+    background: #4080FE;
+    border-radius: 6px;
+    padding: 10px 34px;
+    color: white;
+    margin-top: 40%;
+}
+
+.btn-primario:hover{
+    background: #2363e4;
+    color: rgb(226, 226, 226);
+}

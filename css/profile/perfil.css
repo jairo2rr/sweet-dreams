@@ -1,0 +1,55 @@
+
+/* Primary color: #2a255b */
+/* Secondary color: #413178 */
+/* Light color: #aca6c4 */
+
+body{
+    display: flex;
+    flex-direction: column;
+    background: rgb(37, 37, 37);
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, sans-serif,Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+header{
+    padding: 30px 0px 0px 15px;
+    width: 100%;
+    /* text-align: start; */
+}
+header > a{
+    color: white;
+}
+main{
+    padding: 10px 40px 0px 40px;
+    margin-top: 60px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    height: auto;
+    /* height: fit-content; */
+    width: 100%;
+}
+.btn-custom{
+    background-color: #413178;
+    text-align: center;
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+}
+main > a{
+    text-decoration: none;
+    color: black;
+}
+.divider{
+    width: 100%;
+    border: 2px solid white;
+}
+#lista-options{
+    width: 100%;
+    padding: 10px 0px 0px 30px;
+    text-align: start;
+}
