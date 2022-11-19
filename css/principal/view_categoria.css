@@ -31,15 +31,12 @@ main{
     display:flex;
     flex-direction: column;
     padding: 0px 30px;
-    /* min-height: calc(100vh - 40px - 70px); */
-    /* height: fit-content; */
 }
 main > p {
     color: black;
 }
-
-main > section > p{
-    font-size:12pt;
+main > section{
+    text-align: center;
     font-weight: bold;
 }
 footer{
@@ -73,15 +70,14 @@ footer{
 
 /* Carousel */
 .wrapper{
-    position: relative;
     margin-top: 20px;
-    max-width: auto;
-    z-index: 1;
+    max-width: 1200px;
 }
 
-.wrapper > .carousel{
+.wrapper .carousel{
     display: flex;
     flex-direction: row;
+    gap: 12px;
     cursor: pointer;
     overflow: hidden;
     white-space: nowrap;
@@ -96,30 +92,28 @@ footer{
 }
 
 .carousel > .tarjeta{
-    height: auto;
-    margin-left: 20px;
-    width: calc(100%/5);
+    height: 143px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-width: calc(100%/2.5);
     border-radius: 6px;
-    border: 1px solid white;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
 }
 .carousel> .tarjeta:first-child{
     margin-left: 0px;
 }
-.carousel >.tarjeta >img{
-    object-fit:cover;
-    height: 100%;
-    width: 100%;
-    border-radius: 6px;
-}
 .carousel> .tarjeta> .tarjeta-body{
     height: calc(100%/4);
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.5);
     z-index: 3;
-    position: relative;
     color: white;
+    font-size: 8pt;
 }
 .tarjeta-body>p{
-    align-items: center;
+    text-align: center;
 }
 
 

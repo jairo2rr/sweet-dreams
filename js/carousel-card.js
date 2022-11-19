@@ -1,6 +1,8 @@
 // Carousel
 
-const carousel = document.querySelector(".carousel");
+
+
+const carousel = document.querySelectorAll('.carousel');
 
 let isDragStart = false, prevPageX,isDragging = false, prevScrollLeft, positionDiff;
 
@@ -8,29 +10,25 @@ let isDragStart = false, prevPageX,isDragging = false, prevScrollLeft, positionD
 const dragStart = (e) => {
     isDragStart = true;
     prevPageX = e.pageX || e.touches[0].pageX;
-    prevScrollLeft = carousel.scrollLeft;
+    prevScrollLeft = carousel[0].scrollLeft;
 }
 const dragging = (e) => {
     if(!isDragStart) return;
     e.preventDefault();
     isDragging = true;
-    carousel.classList.add("dragging");
+    carousel[0].classList.add("dragging");
     positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
-    carousel.scrollLeft = prevScrollLeft - positionDiff;
-    showHideIcons();
+    carousel[0].scrollLeft = prevScrollLeft - positionDiff;
 }
-const dragStop = () =>{
+const dragStop = (position) =>{
     isDragStart = false;
-    carousel.classList.remove("dragging");
+    carousel[0].classList.remove("dragging");
 }
 
-carousel.addEventListener("mousedown",dragStart);
-carousel.addEventListener("touchstart",dragStart);
-
-carousel.addEventListener("mousemove",dragging);
-carousel.addEventListener("touchmove",dragging);
-
-carousel.addEventListener("mouseup",dragStop);
-carousel.addEventListener("toucheleave",dragStop);
-
-carousel.addEventListener("mouseleave",dragStop);
+carousel[0].addEventListener("touchstart",dragStart);
+carousel[0].addEventListener("mousedown",dragStart);
+carousel[0].addEventListener("mousemove",dragging);
+carousel[0].addEventListener("touchmove",dragging);
+carousel[0].addEventListener("mouseup",dragStop);
+carousel[0].addEventListener("toucheleave",dragStop);
+carousel[0].addEventListener("mouseleave",dragStop);
