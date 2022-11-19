@@ -118,16 +118,16 @@ footer{
 }
 
 
-/* Carousel */
+/* Carousel for suscriptions*/
 .wrapper{
-    position: relative;
     margin-top: 20px;
     max-width: auto;
-    z-index: 1;
 }
 
 .wrapper .carousel{
-    font-size: 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
     cursor: pointer;
     overflow: hidden;
     white-space: nowrap;
@@ -144,118 +144,86 @@ footer{
 .carousel > img{
     height: calc(100%/8); /*OPcional*/
     object-fit: cover;
-    margin-left: 20px;
     width: calc(100%/8);
     border-radius: 50%;
     border: 2px solid white;
 }
-.carousel img:first-child{
-    margin-left: 0px;
+/* Fin */
+
+/* Carousel for cards*/
+.carousel.dragging > .tarjeta{
+    pointer-events: none;
 }
 
-.wrapper i{
-    top: 50%;
-    height: 38px;
-    width: 38px;
-    z-index: 2;
-    position: absolute;
-    cursor: pointer;
+.carousel > .tarjeta{
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-width: calc(100%/6);
+    border-radius: 6px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+}
+.carousel> .tarjeta> .tarjeta-body{
+    height: calc(100%/4);
+    background: rgba(0,0,0,0.5);
+    z-index: 3;
+    color: white;
+    font-size: 8pt;
+}
+.tarjeta-body>p{
     text-align: center;
-    line-height: 38px;
-    background: #fff;
-    border-radius: 50%;
-    color: black;
-    transform: translateY(-50%);
 }
-.wrapper i:first-child{
-    left: -23px;
-    display: none;
+/* Fin */
+
+/* Carousel for Autor*/
+.carousel > .autor-profile{
+    height: calc(100%/6);
+    display: flex;
+    flex-direction: column;
+    min-width: calc(100%/6);
+    border-radius: 6px;
 }
-.wrapper i:last-child{
-    right: -23px;
+.carousel > .autor-profile>img{
+    width: 100%;
 }
+.carousel> .autor-profile> .autor-body{
+    z-index: 3;
+    color: #aca6c4;
+    font-size: 8pt;
+}
+.autor-body>p{
+    padding-top: 6px;
+    text-align: center;
+    font-weight: normal;
+}
+/* Fin */
 
 @media  screen and (max-width: 900px) {
+    .carousel >.tarjeta{
+        height: 200px;
+        min-width: calc(100%/4);
+    }
+    .carousel >.autor-profile{
+        height: calc(100%/4);
+        min-width: calc(100%/4);
+    }
     .carousel img{
         width: calc(100%/4);
     }
 }
 @media  screen and (max-width: 550px) {
+    .carousel >.tarjeta{
+        height: 143px;
+        min-width: calc(100%/3);
+    }
+    .carousel >.autor-profile{
+        height: calc(100%/3);
+        min-width: calc(100%/3);
+    }
     .carousel img{
         width: calc(100%/3);
     }
-}
-
-.wrapper > .carousel-2{
-    display: flex;
-    flex-direction: row;
-    background: red;
-    cursor: pointer;
-    overflow: hidden;
-    white-space: nowrap;
-    scroll-behavior: smooth;
-}
-.carousel-2 > a{
-    background: yellow;
-    height: 200px; /*OPcional*/
-    margin-left: 20px;
-    width: calc(100%/2);
-}
-.carousel-2 > a > div{
-    height: 100%;
-    width: 100%;
-}
-@media  screen and (max-width: 900px) {
-    .carousel-2 > a{
-        width: calc(100%/4);
-    }
-}
-@media  screen and (max-width: 550px) {
-    .carousel-2 > a{
-        width: calc(100%/3);
-    }
-}
-
-.carousel-2 > a:first-child{
-    margin-left: 0px;
-}
-.card > img{
-    object-fit: cover;
-    height: 100%;
-}
-.bg-transpblack{
-    display: flex;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.8);
-    height: 35%;
-    width: 100%;
-}
-.bg-transpblack > p{
-    margin: 0;
-    padding: 0;
-}
-
-.wrapper > .carousel-biografia{
-    display: flex;
-    flex-direction: row;
-    background: red;
-    cursor: pointer;
-    overflow: hidden;
-    white-space: nowrap;
-    scroll-behavior: smooth;
-}
-.wrapper > .carousel-biografia >.item{
-    height: fit-content;
-    margin-left: 20px;
-    width: calc(100%/3);
-}
-.wrapper > .carousel-biografia > .item:first-child{
-    margin-left: 0px;
-}
-.wrapper > .carousel-biografia >.item > img{
-    /*OPcional*/
-    object-fit: cover;
-    border: 2px solid white;
 }

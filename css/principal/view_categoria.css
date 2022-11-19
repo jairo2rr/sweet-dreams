@@ -68,10 +68,10 @@ footer{
     color: #3b2b70;
 }
 
-/* Carousel */
+/* Carousel for cards*/
 .wrapper{
     margin-top: 20px;
-    max-width: 1200px;
+    max-width: auto;
 }
 
 .wrapper .carousel{
@@ -92,18 +92,15 @@ footer{
 }
 
 .carousel > .tarjeta{
-    height: 143px;
+    height: 380px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    min-width: calc(100%/2.5);
+    min-width: calc(100%/6);
     border-radius: 6px;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; 
-}
-.carousel> .tarjeta:first-child{
-    margin-left: 0px;
 }
 .carousel> .tarjeta> .tarjeta-body{
     height: calc(100%/4);
@@ -115,6 +112,46 @@ footer{
 .tarjeta-body>p{
     text-align: center;
 }
-
-
 /* Fin */
+
+/* Carousel for Autor*/
+.carousel > .autor-profile{
+    height: calc(100%/6);
+    display: flex;
+    flex-direction: column;
+    min-width: calc(100%/6);
+    border-radius: 6px;
+}
+
+.carousel> .autor-profile> .autor-body{
+    z-index: 3;
+    color: #aca6c4;
+    font-size: 8pt;
+}
+.autor-body>p{
+    padding-top: 6px;
+    text-align: center;
+    font-weight: normal;
+}
+/* Fin */
+
+@media  screen and (max-width: 900px) {
+    .carousel >.tarjeta{
+        height: 200px;
+        min-width: calc(100%/4);
+    }
+    .carousel >.autor-profile{
+        height: calc(100%/4);
+        min-width: calc(100%/4);
+    }
+}
+@media  screen and (max-width: 550px) {
+    .carousel >.tarjeta{
+        height: 143px;
+        min-width: calc(100%/3);
+    }
+    .carousel >.autor-profile{
+        height: calc(100%/3);
+        min-width: calc(100%/3);
+    }
+}

@@ -56,6 +56,7 @@ main > section:first-child{
     background: white;
     color: #413178;
 }
+
 .buscador:hover{
     background: rgb(216, 216, 216);
 }
@@ -125,4 +126,10 @@ footer{
     padding: 0px 0px 10px 0px;
     margin :0px;
     border-bottom: 1px solid #413178;
+}
+
+@media  screen and (min-width:900px) {
+    .buscador{
+        font-size: 18pt;
+    }
 }
