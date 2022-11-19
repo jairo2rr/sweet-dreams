@@ -1,0 +1,126 @@
+/* Primary color: #2a255b */
+/* Secondary color: #413178 */
+/* Light color: #aca6c4 */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(20, 20, 20);
+    position: relative;
+    padding-bottom: 70px;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, sans-serif,Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 36px 0px 0px 20px;
+    color: #413178;
+}
+header > a{
+    color: white;
+}
+main{
+    display:flex;
+    flex-direction: column;
+    padding: 0px 30px;
+    /* min-height: calc(100vh - 40px - 70px); */
+    /* height: fit-content; */
+}
+main > p {
+    color: black;
+}
+
+main > section > p{
+    font-size:12pt;
+    font-weight: bold;
+}
+footer{
+    position: fixed;
+    z-index: 4;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    border-radius: 25px 25px 0px 0px;
+}
+.navigation{
+    display: flex;
+    padding: 10px 0px 0px 0px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+}
+.navigation > div > a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    color: #6b52b9;
+}
+.navigation > div > a:hover{
+    color: #3b2b70;
+}
+
+/* Carousel */
+.wrapper{
+    position: relative;
+    margin-top: 20px;
+    max-width: auto;
+    z-index: 1;
+}
+
+.wrapper > .carousel{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+.carousel.dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+}
+.carousel.dragging > .tarjeta{
+    pointer-events: none;
+}
+
+.carousel > .tarjeta{
+    height: auto;
+    margin-left: 20px;
+    width: calc(100%/5);
+    border-radius: 6px;
+    border: 1px solid white;
+}
+.carousel> .tarjeta:first-child{
+    margin-left: 0px;
+}
+.carousel >.tarjeta >img{
+    object-fit:cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+}
+.carousel> .tarjeta> .tarjeta-body{
+    height: calc(100%/4);
+    background: rgba(0,0,0,0.2);
+    z-index: 3;
+    position: relative;
+    color: white;
+}
+.tarjeta-body>p{
+    align-items: center;
+}
+
+
+/* Fin */

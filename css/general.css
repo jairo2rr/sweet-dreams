@@ -1,0 +1,22 @@
+.btn-custom{
+    background-color: #413178;
+    text-align: center;
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+}
+
+
+.field{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: start;
+}
+.field > input{
+    border-radius: 15px;
+    height: 40px;
+    border: 1px solid;
+    padding: 15px;
+}

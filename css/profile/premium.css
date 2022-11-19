@@ -1,0 +1,111 @@
+/* Primary color: #2a255b */
+/* Secondary color: #413178 */
+/* Light color: #aca6c4 */
+
+body{
+    display: flex;
+    flex-direction: column;
+    background: #212121;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, sans-serif,Arial, Helvetica, sans-serif;
+    color: white;
+    /* font-weight: bold; */
+}
+
+header{
+    width: 100%;
+    padding: 36px 0px 0px 20px;
+}
+header > a{
+    color: white;
+}
+
+main{
+    padding: 0px 40px 0px 40px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    height: auto;
+    /* height: fit-content; */
+    width: 100%;
+}
+main > .options{
+    width: 100%;
+}
+
+main > a{
+    text-decoration: none;
+    color: black;
+}
+#lista-options{
+    width: 100%;
+    padding: 10px 0px 0px 30px;
+    text-align: start;
+}
+
+.beneficios{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.beneficios > .item{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    gap: 19px;
+}
+.beneficios>.item>p{
+    padding-top: 14px;
+    text-align: start;
+}
+.method-pay{
+    background-color: #413178;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+    gap: 12px;
+    padding: 20px 15px;
+    border: none;
+    color: white;
+}
+.method-pay:hover{
+    background-color: #382969;
+    color: rgb(196, 196, 196);
+}
+.method-pay > .chk-custom{
+    height: 21px;
+    width: 21px;
+}
+.list-creditcard{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+.list-creditcard2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+}
+.list-creditcard2 > div{
+    padding: 0px 8px;
+    background: white;
+    color: black;
+    border-radius: 6px;
+    align-items: center;
+}
+
+.list-creditcard > div{
+    padding: 0px 8px;
+    background: white;
+    color: black;
+    border-radius: 6px;
+    align-items: center;
+}
